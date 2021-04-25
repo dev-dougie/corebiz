@@ -1,0 +1,78 @@
+.newsContainer{
+    background: var(--gray);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem 0;
+
+    h2{
+        color: #333333;
+    }
+
+    form{
+       input, button{
+           border-radius: 6px;
+           border: none;
+           padding: 0.9rem;
+           height: 3rem;
+
+       }
+
+       .errorInput{
+           color: var(--red);
+       }
+
+       input{
+            border: 1px solid var(--gray);
+            font-size: 0.75rem;
+            width: 280px;
+            margin: 0 0.5rem;
+
+            &:focus{
+                outline: none;
+                border-color: 1px var(--gray);
+            }
+       }
+
+        button{
+            background: var(--black);
+            color: var(--white);
+            font-size: 0.875rem;
+            height: 2.9rem;
+
+            transition: 0.2s;
+
+            &:hover{
+                opacity: 0.9;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 720px){
+    .newsContainer{
+        background: var(--gray);
+        padding: 1.2rem 0.5rem; 
+
+        h2{
+            text-align: start;
+        }
+
+        form{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding: 1.2rem 0.5rem;
+
+            button, input{
+                width: 95vw;
+            }   
+
+            input{
+                margin: 3px;
+            }
+        }
+    }
+}

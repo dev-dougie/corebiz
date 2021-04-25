@@ -1,0 +1,141 @@
+.banner {
+    height: 430px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    .leftPiece {
+        background: url("../../public/black-banner.png"), no-repeat;
+        background-size: cover;
+        color: var(--white);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        h1,
+        h2 {
+            margin-left: 10rem;
+            text-align: start;
+            font-weight: 700;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            line-height: 2.5rem;
+        }
+    }
+
+    .rightPiece {
+        background: url("../../public/banner.png"), no-repeat;
+        background-size: cover;
+        z-index: -1;
+    }
+}
+
+.bestSellers {
+    padding: 2rem 10rem;
+
+    h4 {
+        font-weight: 900;
+    }
+
+    hr {
+        max-width: 4rem;
+        height: 0.2rem;
+        background: #c0c0c0;
+
+        border: none;
+    }
+
+    ul {
+        padding: 2.5rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        li {
+            div {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                cursor: pointer;
+                height: 353px;
+
+                span {
+                    text-transform: uppercase;
+                    font-size: 0.75rem;
+                    font-weight: 600;
+                    color: var(--font-color);
+
+                    margin: 0.5rem 0;
+
+                    &.lastValue {
+                        text-transform: none;
+                        text-decoration: line-through;
+                    }
+                }
+
+                button {
+                    display: none;
+                    width: 7.83rem;
+                }
+
+                &:hover {
+                    background: var(--gray);
+
+                    button {
+                        display: flex;
+                        background: var(--black);
+                        color: var(--white);
+                        font-size: 0.75rem;
+                        text-transform: uppercase;
+                        border: none;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 5px;
+                        border-radius: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .banner {
+        grid-template-columns: repeat(1, 1fr);
+
+        .leftPiece {
+            display: none;
+        }
+
+        &::after {
+            content: "";
+            height: 1px;
+        }
+
+        .rightPiece {
+            width: 100%;
+            margin-top: 7px;
+
+            &::before {
+                content: "Olá, o que você está buscando? Criar ou migrar seu e-commerce?";
+                font-size: 3rem;
+                color: var(--white);
+                text-align: start;
+            }
+        }
+    }
+
+    .bestSellers{
+        margin-top: -65px;
+        padding: 5px;
+        
+        ul{
+            overflow-x: scroll;
+        }
+    }
+}

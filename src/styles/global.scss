@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --white: #fff;
+    --gray: #f2f2f2;
+    --black: #000000;
+    --red: #f8475f;
+    --font-color: #7A7A7A;
+}
+
+body,
+input,
+button {
+    font-weight: 700;
+    font-size: 1rem;
+    font-family: "Nunito", sans-serif;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+button {
+    cursor: pointer;
+}
