@@ -1,7 +1,6 @@
 import { createContext, ReactNode, useContext, useState, useEffect } from "react";
 import Cookie from 'js-cookie'
 
-
 type CartContextData = {
     incrementCart: () => void;
     item: number;

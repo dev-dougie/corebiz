@@ -1,6 +1,6 @@
 $font-color: #7a7a7a;
 
-.headerContainer{
+.headerContainer {
     background: var(--white);
     height: 6rem;
 
@@ -10,35 +10,38 @@ $font-color: #7a7a7a;
 
     padding: 1.8rem 6rem;
 
-    .hamburguer{
+    .hamburguer {
         display: none;
         grid-area: menu;
     }
 
-    .logo{
+    .logo {
         grid-area: logo;
-        &::after{
+        
+        &::after {
             content: "";
             width: 250px;
             height: 250px;
-            background: #BFBFBF;
+            background: #bfbfbf;
             border-radius: 2px;
             position: absolute;
             top: 50%;
         }
     }
 
-    form{
+    form {
         grid-area: form;
-        input{
+
+        input {
             width: 30rem;
             border: none;
             border-bottom: 1px solid $font-color;
             font-weight: 400;
             font-size: 0.8125rem;
+            outline: none;
         }
 
-        button{
+        button {
             border: none;
             border-bottom: 1px solid $font-color;
             height: 1.8rem;
@@ -48,46 +51,44 @@ $font-color: #7a7a7a;
         }
     }
 
-    a{
+    a {
         grid-area: account;
         font-weight: 400;
         color: $font-color;
-        font-size: 0.8125rem; 
-        margin-right: - 2rem;  
+        font-size: 0.8125rem;
+        margin-right: -2rem;
     }
 }
 
-
 @media screen and (max-width: 720px) {
-    .headerContainer{
-            display: grid;
-            
-            grid-template-areas:
-                "menu logo cart"
-                "form  form  form";
 
-            border-bottom: 5px;
+    .headerContainer {
+        display: grid;
 
-            .hamburguer{
-                display: block;
-                align-self: center;
-                cursor: pointer;
+        grid-template-areas:
+            "menu logo cart"
+            "form  form  form";
+
+        border-bottom: 5px;
+
+        .hamburguer {
+            display: block;
+            align-self: center;
+            cursor: pointer;
+        }
+
+        .logo {
+            align-self: center;
+        }
+
+        form {
+            input {
+                max-width: 95%;
             }
+        }
 
-            .logo{
-                align-self: center;
-            }
-
-            form{
-
-                input {
-                    max-width: 95%;
-                }
-            }
-
-            a{
-                display: none;
-            }
+        a {
+            display: none;
+        }
     }
-       
 }

@@ -1,23 +1,28 @@
 import { Cart } from '../Cart';
 import style from './styles.module.scss';
 
-export function Header(){
+export function Header() {
+
+    const handleSubmit = e => e.preventDefault();
+
     return (
-        <header className = {style.headerContainer}>
-            <div className= {style.hamburguer}>
-                <img src="/hamburguer.svg" alt="Menu"/>
+        <header className={style.headerContainer}>
+
+            <div className={style.hamburguer}>
+                <img src="/hamburguer.svg" alt="Menu" />
             </div>
 
-            <img src="/logo.svg" alt="Corebiz" className = {style.logo}/>
+            <img src="/logo.svg" alt="Corebiz" className={style.logo} />
 
-             <form action="POST">
-                 <input type="text" placeholder = "O que você está procurando?"/>
-                 <button type = "submit"><img src="/search.svg" alt="Pesquisar"/></button>
-             </form>
+            <form action="" onSubmit={handleSubmit}>
+                <input type="text" placeholder="O que você está procurando?" />
+                <button type="submit"><img src="/search.svg" alt="Pesquisar" /></button>
+            </form>
 
-            <a href="#">Minha conta</a>
+            <a href="#"><img src="/account.svg" alt="Minha conta" /></a>
 
-            <Cart/>
+            <Cart />
+
         </header>
     )
 }

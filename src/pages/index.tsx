@@ -4,11 +4,23 @@ import { Newsletter } from '../components/Newsletter';
 import { useCart } from '../context/CartContext';
 import { api } from '../services/api';
 import style from './home.module.scss';
-import { BiChevronLeft, BiChevronRight } from 'react-icons/bi'
-import { formatPriceToRenderization } from '../utils/formatPriceToRenderization';
+import { BiChevronLeft, BiChevronRight } from 'react-icons/bi';
 
+type Product = {
+    id: number;
+    name: string;
+    stars: number;
+    image: string;
+    lastPrice: string;
+    newPrice: string;
+    //installments: Array<Object>;
+}
 
-export default function Home({ products }) {
+type ProductList = {
+    products: Product[];
+}
+
+export default function Home({ products }: ProductList) {
 
     const { incrementCart } = useCart();
 
@@ -19,32 +31,40 @@ export default function Home({ products }) {
             </Head>
 
             <div className={style.banner}>
-                <div className={style.leftPiece}>
+
+                <div className={style.leftBanner}>
                     <h2>Olá, o que você está buscando?</h2>
                     <h1>Criar ou migrar seu <br /> e-commerce?</h1>
                 </div>
-                <div className={style.rightPiece} />
+
+                <div className={style.rightBanner} />
             </div>
 
             <div className={style.bestSellers}>
                 <h4>Mais vendidos</h4>
 
                 <hr />
+
                 <ul>
-                    <BiChevronLeft size={32} />
-                    {products.map(prod => {
+                    <BiChevronLeft size={32} cursor="not-allowed" />
+                    {
+                    products.map(prod => {
                         return (
-                            <li key={prod.id}>
+                            <li key={ prod.id }>
                                 <div>
-                                    <img src={prod.image} alt={prod.name} />
-                                    <span>{prod.name}</span>
-                                    <span>Nota {prod.stars}</span>
+                                    <img src={ prod.image } alt={ prod.name } />
+                                    <span>{ prod.name }</span>
+                                    <span>Nota { prod.stars }</span>
+                                    
                                     {prod.lastPrice === null ?
-                                        <p>Por R$ {prod.newPrice}</p>
+                                        <p>por R${ prod.newPrice }</p>
                                         : (
                                             <>
-                                                <span className={style.lastValue}>De R$ {prod.lastPrice}</span>
-                                                <p>Por R$ {prod.newPrice}</p>
+                                                <span className={ style.lastValue }>De R$ { prod.lastPrice }</span>
+                                                <p>por R${ prod.newPrice }</p>
+                                                {
+                                                    prod.newPrice !== '' ? <span style={{ textTransform: 'none' }}>ou em 0x de R$000,00</span> : null
+                                                }
                                             </>
                                         )
                                     }
@@ -52,8 +72,9 @@ export default function Home({ products }) {
                                 </div>
                             </li>
                         )
-                    })}
-                    <BiChevronRight size={32} />
+                    }
+                    )}
+                    <BiChevronRight size={32} cursor="not-allowed" />
                 </ul>
             </div>
 
@@ -62,12 +83,14 @@ export default function Home({ products }) {
     )
 }
 
+//Static Side Generator
 export const getStaticProps: GetStaticProps = async () => {
 
     const { data } = await api.get('products')
 
-
+    //Formatting data on server side
     const products = data.map(product => {
+        const { installments } = product
 
         return {
             id: product.productId,
@@ -75,7 +98,7 @@ export const getStaticProps: GetStaticProps = async () => {
             stars: product.stars,
             image: product.imageUrl,
             lastPrice: product.lastPrice,
-            newPrice: product.price,
+            newPrice: product.price
         }
     })
 
@@ -84,5 +107,4 @@ export const getStaticProps: GetStaticProps = async () => {
             products
         }
     }
-
 }

@@ -1,23 +1,20 @@
-.cartContainer{
-
+.cartContainer {
     display: flex;
     cursor: pointer;
-    
-    .cartItens{
+
+    .cartItens {
         background: var(--red);
         color: var(--white);
-    
+
         width: 20px;
         height: 20px;
-    
+
         display: flex;
         align-items: center;
         justify-content: center;
-    
+
         padding: 0.1rem;
         border-radius: 100px;
         margin-left: 2px;
-        
     }
 }
-

@@ -4,7 +4,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 
-    .leftPiece {
+    .leftBanner {
         background: url("../../public/black-banner.png"), no-repeat;
         background-size: cover;
         color: var(--white);
@@ -26,10 +26,12 @@
         }
     }
 
-    .rightPiece {
+    .rightBanner {
         background: url("../../public/banner.png"), no-repeat;
         background-size: cover;
         z-index: -1;
+
+        margin-left: -85px;
     }
 }
 
@@ -61,7 +63,7 @@
                 justify-content: center;
                 flex-direction: column;
                 cursor: pointer;
-                height: 353px;
+                height: 400px;
 
                 span {
                     text-transform: uppercase;
@@ -80,6 +82,10 @@
                 button {
                     display: none;
                     width: 7.83rem;
+
+                    &:hover{
+                        opacity: 0.8;
+                    }
                 }
 
                 &:hover {
@@ -105,10 +111,11 @@
 }
 
 @media screen and (max-width: 720px) {
+
     .banner {
         grid-template-columns: repeat(1, 1fr);
 
-        .leftPiece {
+        .leftBanner {
             display: none;
         }
 
@@ -117,7 +124,7 @@
             height: 1px;
         }
 
-        .rightPiece {
+        .rightBanner {
             width: 100%;
             margin-top: 7px;
 
@@ -130,12 +137,30 @@
         }
     }
 
-    .bestSellers{
+    .bestSellers {
         margin-top: -65px;
         padding: 5px;
-        
-        ul{
+
+        ul {
             overflow-x: scroll;
+
+            li {
+                div {
+                    button {
+                        display: flex;
+                        background: var(--black);
+                        color: var(--white);
+                        font-size: 0.75rem;
+                        text-transform: uppercase;
+                        border: none;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 5px;
+                        border-radius: 5px;
+                    }
+                }
+            }
         }
     }
 }

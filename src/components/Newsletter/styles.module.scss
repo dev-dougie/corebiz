@@ -1,4 +1,4 @@
-.newsContainer{
+.newsContainer {
     background: var(--gray);
 
     display: flex;
@@ -7,36 +7,37 @@
     flex-direction: column;
     padding: 1rem 0;
 
-    h2{
+    h2 {
         color: #333333;
     }
 
-    form{
-       input, button{
-           border-radius: 6px;
-           border: none;
-           padding: 0.9rem;
-           height: 3rem;
+    form {
+        input,
+        button {
+            border-radius: 6px;
+            border: none;
+            padding: 0.9rem;
+            height: 3rem;
+        }
 
-       }
+        .errorInput {
+            outline: none !important;
+            border: 1px solid var(--red);
+        }
 
-       .errorInput{
-           color: var(--red);
-       }
-
-       input{
+        input {
             border: 1px solid var(--gray);
             font-size: 0.75rem;
             width: 280px;
             margin: 0 0.5rem;
 
-            &:focus{
-                outline: none;
-                border-color: 1px var(--gray);
+            &:focus {
+                outline: none !important;
+                border: 1px solid #bdbdbd;
             }
-       }
+        }
 
-        button{
+        button {
             background: var(--black);
             color: var(--white);
             font-size: 0.875rem;
@@ -44,33 +45,34 @@
 
             transition: 0.2s;
 
-            &:hover{
+            &:hover {
                 opacity: 0.9;
             }
         }
     }
 }
 
-@media screen and (max-width: 720px){
-    .newsContainer{
+@media screen and (max-width: 720px) {
+    .newsContainer {
         background: var(--gray);
-        padding: 1.2rem 0.5rem; 
+        padding: 1.2rem 0.5rem;
 
-        h2{
+        h2 {
             text-align: start;
         }
 
-        form{
+        form {
             display: flex;
             align-items: center;
             flex-direction: column;
             padding: 1.2rem 0.5rem;
 
-            button, input{
+            button,
+            input {
                 width: 95vw;
-            }   
+            }
 
-            input{
+            input {
                 margin: 3px;
             }
         }
