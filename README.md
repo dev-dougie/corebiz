@@ -19,7 +19,7 @@ Você pode realizar o download desses carinhas aqui: [GIT](https://git-scm.com/)
 git clone https://github.com/dev-dougie/corebiz.git
 ```
 👉 2 - Após o primeiro procedimento, vá até a raíz do projeto, abra o terminal e instale a depedência de desenvolvimento necessária. 
-Este pacote, simula o servidor de produtos da aplicação com os dados já formatados.
+Este pacote, simula o servidor de produtos da aplicação com os dados já formatados. Ele estará no endereço local http://localhost:3333/products
 
 ```bash
 yarn add server-json -D
@@ -28,7 +28,8 @@ yarn add server-json -D
 ```bash
 yarn add next
 ```
-👉 4 - Após a instalação do Next, rode o projeto em sua máquina.(Não se esqueça de iniciar aquele servidor lá da 2º etapa)
+👉 4 - Após a instalação do Next, rode o projeto em sua máquina.(Não se esqueça de iniciar aquele servidor lá da 2º etapa). Ele estará no endereço local http://localhost:3000.
+Dica: execute os comandos em dois terminas diferentes.
 ```bash
 yarn server
 ```
