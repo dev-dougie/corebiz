@@ -4,7 +4,7 @@
 
 <ul>
   <li>HTML5 + CSS3 (Sass)</li> 
-  <li>ReactJS + NextJS</li>
+  <li>ReactJS, Typescript e NextJS</li>
 </ul>
 
 
