@@ -16,7 +16,7 @@ Você pode realizar o download desses carinhas aqui: [GIT](https://git-scm.com/)
 👉 1 - Realize o clone deste repositório em um diretório de sua preferência:
 
 ```bash
-git clone https://github.com/dev-dougie/corebiz/
+git clone https://github.com/dev-dougie/corebiz.git
 ```
 👉 2 - Após o primeiro procedimento, vá até a raíz do projeto, abra o terminal e instale a depedência de desenvolvimento necessária. 
 Este pacote, simula o servidor de produtos da aplicação com os dados já formatados.
