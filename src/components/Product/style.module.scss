@@ -1,41 +1,4 @@
-.banner {
-    height: 430px;
-
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-
-    .leftBanner {
-        background: url("../../public/black-banner.png"), no-repeat;
-        background-size: cover;
-        color: var(--white);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-
-        h1,
-        h2 {
-            margin-left: 10rem;
-            text-align: start;
-            font-weight: 700;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            line-height: 2.5rem;
-        }
-    }
-
-    .rightBanner {
-        background: url("../../public/banner.png"), no-repeat;
-        background-size: cover;
-        z-index: -1;
-
-        margin-left: -85px;
-    }
-}
-
-.bestSellers {
+.products {
     padding: 2rem 10rem;
 
     h4 {
@@ -112,33 +75,7 @@
 
 @media screen and (max-width: 720px) {
 
-    .banner {
-        grid-template-columns: repeat(1, 1fr);
-
-        .leftBanner {
-            display: none;
-        }
-
-        &::after {
-            content: "";
-            height: 1px;
-        }
-
-        .rightBanner {
-            margin-left: 0;
-            width: 100% !important;
-            margin-top: 7px;
-
-            &::before {
-                content: "Olá, o que você está buscando? Criar ou migrar seu e-commerce?";
-                font-size: 3rem;
-                color: var(--white);
-                text-align: start;
-            }
-        }
-    }
-
-    .bestSellers {
+    .products {
         margin-top: -65px;
         padding: 5px;
 

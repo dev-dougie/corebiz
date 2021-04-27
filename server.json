@@ -6,11 +6,11 @@
           "stars": 1,
           "imageUrl": "https://corebiz-test.herokuapp.com/images/product-1.png",
           "lastPrice": null,
-          "price": "259,90",
+          "price": 25990,
           "installments": [
             {
               "quantity": 9,
-              "value": "28,87"
+              "value": 2887
             }
           ]
         },
@@ -19,8 +19,8 @@
           "productName": "SANDÁLIA LINHO BROWN",
           "stars": 4,
           "imageUrl": "https://corebiz-test.herokuapp.com/images/product-2.png",
-          "lastPrice": "299,00",
-          "price": "199,00",
+          "lastPrice": 29900,
+          "price": 19900,
           "installments": [
             {
               "quantity": 4,
@@ -33,12 +33,12 @@
           "productName": "BOTA MUSTANG PRETO",
           "stars": 2,
           "imageUrl": "https://corebiz-test.herokuapp.com/images/product-3.png",
-          "lastPrice": "329,00",
-          "price": "299,00",
+          "lastPrice": 32900,
+          "price": 29900,
           "installments": [
             {
               "quantity": 10,
-              "value": "29,90"
+              "value": 2990
             }
           ]
         },
@@ -48,7 +48,7 @@
           "stars": 3,
           "imageUrl": "https://corebiz-test.herokuapp.com/images/product-4.png",
           "lastPrice": null,
-          "price": "79,90",
+          "price": 7990,
           "installments": []
         }
       ]

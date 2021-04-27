@@ -24,6 +24,7 @@ export function Newsletter() {
             name: data.name,
             email: data.email
         }).then(res => console.log(res.data))
+        .catch(res => console.log(res.status))
     }
 
     const handleChange = e => {

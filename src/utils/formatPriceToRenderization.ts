@@ -1,15 +1,4 @@
-export function formatPriceToRenderization(price: String){
-
-    if(price === null || price === undefined){
-        return;
-    }
-
-    //const stringfyValue = String(price.toString());
-
-    const cent = price.slice(-2);
-    const real = price.slice(0, price.indexOf(cent))
-
-    const finalFormatting =  `${real},${cent}`
-
-    return finalFormatting
-}   
+export const { format: formatPriceToRenderization } = new Intl.NumberFormat('pt-BR', {
+    style: 'currency',
+    currency: 'BRL',
+  });
