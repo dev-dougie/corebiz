@@ -25,7 +25,9 @@ git clone https://github.com/dev-dougie/corebiz.git
 yarn add next
 ```
 👉 3 – After Next added, run the project in development mode. The default host will be: http://localhost:3000/
-
+```bash
+yarn dev
+```
 <hr/>
 
 <h4> But wait a minute, and if you want to simulate the website in production mode? 🤔 </h4>
