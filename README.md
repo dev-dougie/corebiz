@@ -1,40 +1,45 @@
-# Corebiz - Teste Front-End 💻
+# Corebiz - Front-End Test 💻
 
-## Tecnologias utilizadas 🔧
+![corebiz](https://user-images.githubusercontent.com/61589484/116228402-9f1f6800-a72b-11eb-812a-c1c1ef124a41.jpg)
 
+
+## Used technologies: 🔧
 <ul>
-  <li>HTML5 + CSS3 (Sass)</li> 
-  <li>ReactJS, Typescript e NextJS</li>
+  <li>HTML5 + CSS3 (Sass)</li>
+  <li>ReactJS, TypeScript and NextJS</li>
 </ul>
 
+## How to view the project? 👀
 
-## Como visualizar o projeto? 👀
+Ps.: Before you get start, make sure that git, Node and preferably Yarn package manager (‘npm’ works too), are installed. You can download these tools right here: [GIT](https://git-scm.com/), [NODE](https://nodejs.org/en/) e [YARN](https://yarnpkg.com/cli/install)
 
-Obs.: Antes de iniciar, certifique-se de que o git, NodeJS e preferencialmente ( "npm" também funciona ), o gerenciador de pacotes Yarn estão devidamente instalados.
-Você pode realizar o download desses carinhas aqui: [GIT](https://git-scm.com/) [NODE](https://nodejs.org/en/) [YARN](https://yarnpkg.com/cli/install)
+Steps:
 
-👉 1 - Realize o clone deste repositório em um diretório de sua preferência:
+👉 1- Clone this repository in a directory of your choice:
 ```bash
 git clone https://github.com/dev-dougie/corebiz.git
 ```
-👉 2 - Instale o Next. Ele será responsável por renderizar o a página no lado do servidor. Você pode saber mais sobre este tipo de arquitetura nesse link [aqui](https://medium.com/techbloghotmart/o-que-%C3%A9-server-side-rendering-e-como-usar-na-pr%C3%A1tica-a840d76a6dca)
+
+👉 2 – Install the Next. It will be responsible to render the page on the server side. You can know more about this architecture in this link [here](https://medium.com/techbloghotmart/o-que-%C3%A9-server-side-rendering-e-como-usar-na-pr%C3%A1tica-a840d76a6dca) (Portuguese)
 ```bash
 yarn add next
 ```
-👉 3 - Após a instalação do Next, rode o projeto em sua máquina.
-```bash
-yarn dev
-```
+👉 3 – After Next added, run the project in development mode. The default host will be: http://localhost:3000/
 
-<h4>Mas calma lá, e se você quiser simular o site em produção? 🤔</h4>
+<hr/>
 
-É simples! Primeiro temos que buildar nosso projeto. 
+<h4> But wait a minute, and if you want to simulate the website in production mode? 🤔 </h4>
+
+It’s simple! First we have to build the project:
 ```bash
 yarn build
 ```
-Agora é hora de iniciar o projeto simulando um ambiente de produção:
+Now it’s time to start the project simulating a production environment:
 ```bash
 yarn start
 ```
+Ready to take off! 🚀
 
-Pronto! 🚀
+## License
+[Corebiz](https://www.corebiz.ag/pt/)
+
